@@ -40,7 +40,6 @@ local on_attach = function(client, bufnr)
     autocmd BufWritePost <buffer> LspFormatting
     augroup END
     ]], true)
-  end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
@@ -138,7 +137,6 @@ local eslint = require("plugins.efm.eslint")
 nvim_lsp.efm.setup{
   on_attach = on_attach,
   init_options = {documentFormatting = true},
-  root_dir = vim.loop.cwd,
   filetypes = {"javascriptreact", "javascript", "typescript", "typescriptreact"},
   settings = {
     rootMarkers = {".git/"},
