@@ -40,6 +40,7 @@ local on_attach = function(client, bufnr)
     autocmd BufWritePost <buffer> LspFormatting
     augroup END
     ]], true)
+  end
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()
