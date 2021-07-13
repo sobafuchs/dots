@@ -3,3 +3,5 @@ local vim = vim
 
 register = wk.register
 
+-- write to buffer
+vim.cmd [[nno ;; :w<CR>]]
