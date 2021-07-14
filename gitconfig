@@ -1,6 +1,10 @@
-[user]
-    email = varun.jayaraman@gmail.com
-    name = Varun Jayaraman
+[includeIf "gitdir:~/workspace/code/staffbase/"]
+  path = ~/.gitconfig-work
+[includeIf "gitdir:~/workspace/code/personal/"]
+  path = ~/.gitconfig-personal
+[includeIf "gitdir:~/dots/"]
+  path = ~/.gitconfig-personal
+
 [alias]
     hash = log --pretty=format:'%h' -n 1
     lg1 = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(dim white)- %an%C(reset)%C(bold yellow)%d%C(reset)' --all
@@ -10,6 +14,5 @@
     editor = nvim
 [pull]
   rebase = true
-[editor]
 [github]
-	user = varunjayaraman
+  user = varunjayaraman

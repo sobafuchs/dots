@@ -27,6 +27,8 @@ fi
 
 configs=(
   "tmux.conf"
+  "gitconfig-personal"
+  "gitconfig-work"
   "gitconfig"
   "agignore"
   "zshrc"

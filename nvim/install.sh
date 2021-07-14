@@ -2,7 +2,8 @@ echo "installing packer"
 
 set -eu
 
-rm -rf ~/.config/nvim
+echo "moving nvim config to ~/.config/nvim-bak"
+mv ~/.config/nvim ~/.config/nvim-bak
 
 if [ -d ~/.local/share/nvim/site/pack/packer ]; then
   echo "Clearning previous packer installs"
