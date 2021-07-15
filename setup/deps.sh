@@ -55,6 +55,8 @@ sudo apt install -y git \
   libxext-dev \
   ninja-build
 
+sudo aptitude install clang libclang-dev # for vim parinfer-rust
+
 ./fonts.sh
 echo "done!"
 
