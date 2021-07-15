@@ -71,8 +71,7 @@ packer.startup(function()
 
   -- clojure
   use {"Olical/conjure", tag = 'v4.21.0'}
-  use {"guns/vim-sexp"}
-  use {"tpope/vim-sexp-mappings-for-regular-people"}
+  use {"eraserhd/parinfer-rust", run = "cargo build --release"}
 
   -- git
   use {
