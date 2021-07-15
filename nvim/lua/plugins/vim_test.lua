@@ -8,6 +8,7 @@ register({
   t = {
     name = "test",
     f = {"<Cmd>:TestFile<CR>", "file"},
-    t = {"<Cmd>:TestNearest<CR>", "nearest"}
+    t = {"<Cmd>:TestNearest<CR>", "nearest"},
+    a = {"<Cmd>:TestSuite<CR>", "suite"}
   }
 }, { prefix = "<Leader>"})
