@@ -59,7 +59,7 @@ local luadev = require("lua-dev").setup({
     settings = {
       Lua = {
         diagnostics = {
-          enable = true,
+          -- enable = true,
           globals = {"vim", "use"}
         }
       }
@@ -127,33 +127,9 @@ nvim_lsp.tsserver.setup {
 nvim_lsp.cssls.setup {on_attach = on_attach}
 nvim_lsp.html.setup {on_attach = on_attach}
 
-nvim_lsp.clojure_lsp.setup {
-  on_attach = on_attach,
-  capabilities = capabilities,
-}
 
-local prettier = require("plugins.efm.prettier")
-local eslint = require("plugins.efm.eslint")
+require("plugins.lsp.clojure").config(nvim_lsp, on_attach, capabilities)
 
---nvim_lsp.efm.setup{
-  -- on_attach = on_attach,
-  -- init_options = {documentFormatting = true},
-  -- filetypes = {"javascriptreact", "javascript", "typescript", "typescriptreact"},
-  -- settings = {
-    -- rootMarkers = {".git/"},
-    -- languages = {
-      -- typescript = {prettier, eslint},
-      -- javascript = {eslint,prettier},
-      -- typescriptreact = {eslint,prettier},
-      -- javascriptreact = {eslint,prettier},
-      -- yaml = {eslint},
-      -- json = {eslint},
-      -- html = {prettier, eslint},
-      -- scss = {eslint},
-      -- css = {prettier, eslint},
-    -- },
-  -- }
--- }
-
+-- require("plugins.lsp.efm").config(nvim_lsp, on_attach)
 cmd('autocmd BufWritePre *.go lua goimports(1000)')
 

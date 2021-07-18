@@ -35,7 +35,7 @@ local function load_options()
     expandtab = true;
     smartcase = true;
     relativenumber = false;
-    clipboard = 'unnamedplus'
+    clipboard = 'unnamedplus';
   }
 
   for k, v in pairs(global_local) do
@@ -54,3 +54,4 @@ end
 
 load_options()
 load_mappings()
+vim.cmd [[let g:iced_enable_default_key_mappings = v:true]]

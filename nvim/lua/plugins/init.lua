@@ -70,8 +70,9 @@ packer.startup(function()
   use {"hrsh7th/vim-vsnip", config = function() require("plugins.vsnip") end}
 
   -- clojure
-  use {"Olical/conjure", tag = 'v4.21.0'}
-  use {"eraserhd/parinfer-rust", run = "cargo build --release"}
+  -- use {"Olical/conjure", tag = 'v4.21.0'}
+  use {"liquidz/vim-iced", ft = {"clojure"}, requires = {"tami5/vim-iced-compe", "guns/vim-sexp"}}
+  -- use {"eraserhd/parinfer-rust", run = "cargo build --release"}
 
   -- git
   use {
