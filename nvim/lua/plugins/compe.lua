@@ -24,6 +24,7 @@ M.config = function()
     };
 
     source = {
+      conjure = true;
       path = true;
       buffer = true;
       calc = true;
