@@ -135,25 +135,25 @@ nvim_lsp.clojure_lsp.setup {
 local prettier = require("plugins.efm.prettier")
 local eslint = require("plugins.efm.eslint")
 
-nvim_lsp.efm.setup{
-  on_attach = on_attach,
-  init_options = {documentFormatting = true},
-  filetypes = {"javascriptreact", "javascript", "typescript", "typescriptreact"},
-  settings = {
-    rootMarkers = {".git/"},
-    languages = {
-      typescript = {prettier, eslint},
-      javascript = {eslint,prettier},
-      typescriptreact = {eslint,prettier},
-      javascriptreact = {eslint,prettier},
+--nvim_lsp.efm.setup{
+  -- on_attach = on_attach,
+  -- init_options = {documentFormatting = true},
+  -- filetypes = {"javascriptreact", "javascript", "typescript", "typescriptreact"},
+  -- settings = {
+    -- rootMarkers = {".git/"},
+    -- languages = {
+      -- typescript = {prettier, eslint},
+      -- javascript = {eslint,prettier},
+      -- typescriptreact = {eslint,prettier},
+      -- javascriptreact = {eslint,prettier},
       -- yaml = {eslint},
       -- json = {eslint},
-      html = {prettier, eslint},
+      -- html = {prettier, eslint},
       -- scss = {eslint},
-      css = {prettier, eslint},
-    },
-  }
-}
+      -- css = {prettier, eslint},
+    -- },
+  -- }
+-- }
 
 cmd('autocmd BufWritePre *.go lua goimports(1000)')
 
