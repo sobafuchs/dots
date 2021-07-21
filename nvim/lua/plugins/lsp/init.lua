@@ -59,7 +59,7 @@ local luadev = require("lua-dev").setup({
     settings = {
       Lua = {
         diagnostics = {
-          -- enable = true,
+          enable = true,
           globals = {"vim", "use"}
         }
       }
@@ -131,5 +131,6 @@ nvim_lsp.html.setup {on_attach = on_attach}
 require("plugins.lsp.clojure").config(nvim_lsp, on_attach, capabilities)
 
 -- require("plugins.lsp.efm").config(nvim_lsp, on_attach)
+
 cmd('autocmd BufWritePre *.go lua goimports(1000)')
 
