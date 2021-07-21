@@ -31,6 +31,7 @@ packer.startup(function()
       require("plugins.zen_mode")
     end
   }
+  use {"p00f/nvim-ts-rainbow"}
 
   -- files
   use {
