@@ -35,7 +35,7 @@ local function load_options()
     expandtab = true;
     smartcase = true;
     relativenumber = false;
-    clipboard = 'unnamedplus'
+    clipboard = 'unnamedplus';
   }
 
   for k, v in pairs(global_local) do
