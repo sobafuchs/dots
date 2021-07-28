@@ -15,13 +15,15 @@ local function define_mappings(bufnr)
       name = "lsp",
       g = {
         name = "go to",
-        d = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
+        d = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "definition"},
         r = {"<Cmd>lua vim.lsp.buf.references()<CR>", "references"},
         i = {"<Cmd>lua vim.lsp.buf.implementation()<CR>", "implementation"},
       },
       p = {
         name = "peek",
-        d = {"<Cmd>:Lspsaga preview_definition<CR>", "preview definition"},
+        d = {"<Cmd>:Lspsaga preview_definition<CR>", "definition"},
+        s = {"<Cmd>:Lspsaga signature_help<cr>", "signature"},
+        f = {"<Cmd>:Lspsaga lsp_finder<cr>", "find"},
       },
       r = {
         name = "refactor",
