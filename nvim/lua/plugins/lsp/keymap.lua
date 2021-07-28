@@ -16,7 +16,6 @@ local function define_mappings(bufnr)
       g = {
         name = "go to",
         d = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
-        -- D = {"<Cmd>lua vim.lsp.buf.declaration()<CR>", "peek definition"},
         r = {"<Cmd>lua vim.lsp.buf.references()<CR>", "references"},
         i = {"<Cmd>lua vim.lsp.buf.implementation()<CR>", "implementation"},
       },
