@@ -18,14 +18,25 @@ local on_attach = function(client, bufnr)
   }, { buffer = bufnr})
 
   wk.register({
-    name = "lsp",
-    g = {
-      name = "go to",
-      d = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
-      D = {"<Cmd>lua vim.lsp.buf.declaration()<CR>", "peek definition"},
-      r = {"<Cmd>lua vim.lsp.buf.references()<CR>", "references"},
-      i = {"<Cmd>lua vim.lsp.buf.implementation()<CR>", "implementation"},
-    }
+    l = {
+      name = "lsp",
+      g = {
+        name = "go to",
+        d = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
+        -- D = {"<Cmd>lua vim.lsp.buf.declaration()<CR>", "peek definition"},
+        r = {"<Cmd>lua vim.lsp.buf.references()<CR>", "references"},
+        i = {"<Cmd>lua vim.lsp.buf.implementation()<CR>", "implementation"},
+      },
+      p = {
+        name = "peek",
+        d = {"<Cmd>Lspsaga preview_definition<CR>", "preview definition"},
+      },
+      r = {
+        name = "refactor",
+        a = {"<Cmd>Lspsaga code_action<CR>", "code action"},
+        r = {"<Cmd>Lspsaga rename<CR>", "rename"}
+      }
+    },
   }, { buffer = bufnr, prefix = "" })
 
   wk.register({

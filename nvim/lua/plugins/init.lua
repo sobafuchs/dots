@@ -51,7 +51,7 @@ packer.startup(function()
 
   -- editor
   use {"windwp/nvim-autopairs", config = function() require'plugins.autopairs' end}
-  use {"windwp/nvim-ts-autotag", config = function() require'plugins.autotag' end} 
+  use {"windwp/nvim-ts-autotag", config = function() require'plugins.autotag' end}
   use "folke/which-key.nvim"
   use {
     "nvim-treesitter/nvim-treesitter",
