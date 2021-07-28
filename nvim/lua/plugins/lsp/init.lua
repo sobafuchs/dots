@@ -7,42 +7,13 @@ local lspinstall = require("lspinstall")
 local nvim_lsp = require('lspconfig')
 local saga = require("lspsaga")
 saga.init_lsp_saga()
+local define_mappings = require("plugins.lsp.keymap")
 
 local on_attach = function(client, bufnr)
   vim.cmd("command! LspFormatting lua vim.lsp.buf.formatting()")
   vim.api.nvim_buf_set_option(bufnr, "omnifunc", "v:lua.vim.lsp.omnifunc")
-  vim.api.nvim_command('nnoremap <silent>K :Lspsaga hover_doc<CR>')
 
-  wk.register({
-    ["<Leader>q"] = {'<cmd>lua vim.lsp.diagnostic.set_loclist()<CR>', "diagnostics list"}
-  }, { buffer = bufnr})
-
-  wk.register({
-    l = {
-      name = "lsp",
-      g = {
-        name = "go to",
-        d = {"<Cmd>lua vim.lsp.buf.definition()<CR>", "go to definition"},
-        -- D = {"<Cmd>lua vim.lsp.buf.declaration()<CR>", "peek definition"},
-        r = {"<Cmd>lua vim.lsp.buf.references()<CR>", "references"},
-        i = {"<Cmd>lua vim.lsp.buf.implementation()<CR>", "implementation"},
-      },
-      p = {
-        name = "peek",
-        d = {"<Cmd>Lspsaga preview_definition<CR>", "preview definition"},
-      },
-      r = {
-        name = "refactor",
-        a = {"<Cmd>Lspsaga code_action<CR>", "code action"},
-        r = {"<Cmd>Lspsaga rename<CR>", "rename"}
-      }
-    },
-  }, { buffer = bufnr, prefix = "" })
-
-  wk.register({
-    ["<C-p>"] = {"<Cmd>:Lspsaga diagnostic_jump_prev<CR>", "Jump to Previous Error"},
-    ["<C-n>"] = {"<Cmd>:Lspsaga diagnostic_jump_next<CR>", "Jump to Next Error"},
-  }, { buffer = bufnr, prefix = ""})
+  define_mappings(bufnr)
 
   if client.resolved_capabilities.document_formatting then
     vim.api.nvim_exec([[
