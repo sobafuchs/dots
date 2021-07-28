@@ -32,6 +32,7 @@ packer.startup(function()
     end
   }
   use {"p00f/nvim-ts-rainbow"}
+  use {"romgrk/barbar.nvim", config = function() require("plugins.barbar") end}
 
   -- files
   use {
