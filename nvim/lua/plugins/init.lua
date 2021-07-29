@@ -32,6 +32,7 @@ packer.startup(function()
     end
   }
   use {"p00f/nvim-ts-rainbow"}
+  use {"akinsho/nvim-bufferline.lua", config = function() require("plugins.bufferline") end}
 
   -- files
   use {
