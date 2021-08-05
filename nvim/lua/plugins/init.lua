@@ -49,6 +49,15 @@ packer.startup(function()
   -- terminal
   use {"kassio/neoterm"}
 
+  -- database
+  use {
+    'kristijanhusak/vim-dadbod-ui',
+    requires = {'tpope/vim-dadbod'},
+    config = function()
+      require("plugins.dadbod")
+    end,
+  }
+
   -- editor
   use {"windwp/nvim-autopairs", config = function() require'plugins.autopairs' end}
   use {"windwp/nvim-ts-autotag", config = function() require'plugins.autotag' end}
