@@ -32,6 +32,9 @@ packer.startup(function()
     end
   }
   use {"p00f/nvim-ts-rainbow"}
+  use {'kyazdani42/nvim-tree.lua', config = function()
+    require("plugins.nvim-tree")
+  end}
 
   -- files
   use {
