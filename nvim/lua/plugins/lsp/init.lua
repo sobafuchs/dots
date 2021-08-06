@@ -96,6 +96,8 @@ nvim_lsp.gopls.setup({
     }
 })
 
+nvim_lsp.jsonls.setup{}
+
 nvim_lsp.tsserver.setup {
   on_attach = function(client, bufnr)
     client.resolved_capabilities.document_formatting = false
