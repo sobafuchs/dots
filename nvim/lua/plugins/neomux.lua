@@ -1,0 +1,10 @@
+-- Keymap documentation
+-- <Leader>sh - Start a new neomux term in the current window.
+-- <C-w>t - Start a new neomux term above the current window (:split)
+-- <C-w>T - Start a new neomux term to the left of the current window (:vsplit)
+-- <C-w>[1-9] - move the cursor directly to the window specified (e.g. <C-w>w3 would move the cursor to window 3)
+--<Leader>s[1-9] - swap the current window with another window. (e.g. <Leader>s3 would make your current window switch places with window #3)
+--<C-s> - Exit insert mode while in a neomux shell. This is just an alias for <C-\><C-n> which is the default keymap to end terminal insert mode.
+--<Leader>sf - size-fix. If you re-arrange windows neovim's terminal sometimes doesn't automatically resize the terminal to match the new window's size. This keymapping will cause the window to refresh and resize.
+--<Leader>by - yank buffer. Sometimes it's handy to be able to yank a buffer and paste it into a new window (I often use this if I want to move a window to a new tab). Yanked buffers can be pasted with <Leader>bp.
+--<Leader>bp - paste a previously yanked buffer into a window.
