@@ -50,7 +50,10 @@ packer.startup(function()
   }
 
   -- terminal
-  use {"kassio/neoterm"}
+  use {
+    "nikvdp/neomux",
+    config = function() require("plugins.neomux") end,
+  }
 
   -- database
   use {
