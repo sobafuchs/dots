@@ -51,6 +51,10 @@ packer.startup(function()
 
   -- terminal
   use {
+    "christoomey/vim-tmux-navigator"
+  }
+
+  use {
     "nikvdp/neomux",
     config = function() require("plugins.neomux") end,
   }
