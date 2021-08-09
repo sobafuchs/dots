@@ -81,6 +81,13 @@ packer.startup(function()
     end
   }
 
+  use {
+    'b3nj5m1n/kommentary',
+    config = function()
+      require("plugins.kommentary")
+    end,
+  }
+
   -- lsp/completion
   use {"hrsh7th/nvim-compe", config = require("plugins.compe").config}
   use "folke/lua-dev.nvim"
