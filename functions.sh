@@ -80,3 +80,7 @@ function use_graalvm() {
   path_prepend ${JAVA_HOME}/bin
   java -version
 }
+
+function start_nrepl() {
+  clj -R:nREPL -m nrepl.cmdline
+}
