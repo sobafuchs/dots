@@ -45,6 +45,10 @@ packer.startup(function()
     end
   }
   use {
+    "tpope/vim-dotenv",
+    config = function() require("plugins.dotenv") end
+  }
+  use {
     "vim-test/vim-test",
     config = function() require("plugins.vim_test") end,
   }
