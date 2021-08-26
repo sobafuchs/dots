@@ -1,8 +1,11 @@
 local register = require("which-key").register
+local vim = vim
+local g = vim.g
 
-vim.cmd [[let test#strategy = "neoterm"]]
+
+vim.cmd [[let test#strategy = "neovim"]]
 vim.cmd [[let test#go#gotest#options = "-v -short -tags=integration"]]
-vim.g.neoterm_default_mod = "botright"
+vim.cmd [[let test#neovim#term_position = "vert"]]
 
 register({
   t = {
