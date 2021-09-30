@@ -19,7 +19,7 @@ packer.startup(function()
   -- theme
   use {"embark-theme/vim", config = function() vim.cmd [[colorscheme embark]] end}
   use {
-    "hoob3rt/lualine.nvim",
+    "shadmansaleh/lualine.nvim",
     requires = {"kyazdani42/nvim-web-devicons", opt = true},
     config = function() require("plugins.lualine") end,
   }
@@ -112,4 +112,7 @@ packer.startup(function()
       require("plugins.neogit")
     end
   }
+
+  -- nim - tresitter currently does not support nim
+	use {'alaviss/nim.nvim'}
 end)
