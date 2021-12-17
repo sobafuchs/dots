@@ -9,5 +9,5 @@ export GRAALVM_HOME=$HOME/.asdf/installs/graalvm/21.0.0-java11
 export PATH=$GRAALVM_HOME/bin:$PATH
 # export JAVA_HOME=$GRAALVM_HOME
 export GRADLE_HOME=/opt/gradle/gradle-6.8.3
-export PATH=$GRADLE_HOME/bin:$PATH
+export PATH=$GRADLE_HOME/bin:$HOME/.local/share/coursier/bin:$PATH
 
