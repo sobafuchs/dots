@@ -11,6 +11,8 @@ install_docker_compose() {
   sudo usermod -aG docker $USER newgrp docker
 }
 
+sudo add-apt-repository ppa:sebastian-stenzel/cryptomator
+
 sudo apt update
 
 sudo apt install -y git \
@@ -53,7 +55,8 @@ sudo apt install -y git \
   libz-dev \
   zlib1g-dev \
   libxext-dev \
-  ninja-build
+  ninja-build \
+  cryptomator
 
 sudo aptitude install clang libclang-dev # for vim parinfer-rust
 
