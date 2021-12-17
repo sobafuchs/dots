@@ -34,3 +34,8 @@ vterm_printf(){
 }
 
 alias luamake=/home/roonie/.config/lua-language-server/3rd/luamake/luamake
+
+export PATH=$PATH:$HOME/.emacs.d/bin:$HOME/.elixir-ls/release
+
+# opam configuration
+[[ ! -r /home/roonie/.opam/opam-init/init.zsh ]] || source /home/roonie/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
