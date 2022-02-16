@@ -1,0 +1,3 @@
+#+title: Sobamacs
+
+This is an example of a fully custom Emacs configuration.
