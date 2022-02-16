@@ -8,5 +8,8 @@
   :config
   (require 'smartparens-config)
   (smartparens-global-mode))
+(use-package which-key
+  :config
+  (which-key-mode))
 
 (provide 'programming)
