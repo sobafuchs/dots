@@ -78,4 +78,5 @@
 
 (require 'company)
 (require 'programming)
+(require 'lang-elisp)
 
