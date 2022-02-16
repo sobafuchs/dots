@@ -7,3 +7,4 @@ emacs/straight
 emacs/backups
 emacs/eln-cache
 emacs/auto-save-list
+emacs/.*
