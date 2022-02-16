@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: endpoint
-# key: endpoint
-# --
-func (c *$1) $2(w http.ResponseWriter, r *http.Request) {
-    $3
-}

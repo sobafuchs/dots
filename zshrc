@@ -8,6 +8,8 @@ source $DOTFILES_PATH/functions.sh
 
 export SDKMAN_DIR="/home/varun/.sdkman"
 [[ -s "/home/varun/.sdkman/bin/sdkman-init.sh" ]] && source "/home/varun/.sdkman/bin/sdkman-init.sh"
+export GRAALVM_HOME=$HOME/.asdf/installs/graalvm/21.3.0-java11
+export JAVA_HOME=$HOME/.asdf/installs/graalvm/21.3.0-java11
 
 if [[ -n "$ZSH_VERSION" ]]; then
   eval "$(starship init zsh)"
@@ -35,7 +37,7 @@ vterm_printf(){
 
 alias luamake=/home/roonie/.config/lua-language-server/3rd/luamake/luamake
 
-export PATH=$PATH:$HOME/.emacs.d/bin:$HOME/.elixir-ls/release
+export PATH=$PATH:$HOME/.emacs.d/bin:$HOME/.elixir-ls/release:$HOME/.asdf/installs/graalvm/21.3.0-java11/bin
 
 # opam configuration
 [[ ! -r /home/roonie/.opam/opam-init/init.zsh ]] || source /home/roonie/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null

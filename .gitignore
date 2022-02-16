@@ -3,3 +3,7 @@ packer_compiled.vim
 sandbox
 old-nvim/
 packer_compiled.lua
+emacs/straight
+emacs/backups
+emacs/eln-cache
+emacs/auto-save-list
