@@ -4,7 +4,6 @@
 
 ;; This lsp code should be moved to its own module
 ;; :commands autoloads a command and defers loading a module until used
-(use-package lsp-treemacs)
 (use-package lsp-mode
   :init
   (setq lsp-keymap-prefix "C-c l")
