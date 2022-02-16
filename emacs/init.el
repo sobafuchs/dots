@@ -78,6 +78,7 @@
 
 (require 'company)
 (require 'programming)
+(require 'editor)
 (require 'lang-elisp)
 (require 'lang-clojure)
 
