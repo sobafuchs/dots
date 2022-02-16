@@ -1,1 +1,0 @@
-/home/roonie/.doom.d
