@@ -56,14 +56,6 @@
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
 
-;; upgrade to emacs 28 to get access to C-r
-;; otherwise you need to download undo-fu
-(use-package evil
-  :config
-  (evil-mode 1))
-
-(use-package diminish)
-
 (defvar modules-dir (expand-file-name "modules" user-emacs-directory))
 (add-to-list 'load-path modules-dir)
 

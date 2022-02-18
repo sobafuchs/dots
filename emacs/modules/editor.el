@@ -5,6 +5,14 @@
 ;;; Code:
 (require 'use-package)
 
+(use-package diminish)
+
+;; upgrade to emacs 28 to get access to C-r
+;; otherwise you need to download undo-fu
+(use-package evil
+  :config
+  (evil-mode 1))
+
 (use-package treemacs)
 
 (use-package treemacs-evil
