@@ -55,10 +55,10 @@
   :config
   (load-theme 'doom-one t)
   (doom-themes-visual-bell-config)
-  (setq doom-themes-treemacs-theme "atom-dark")
-  (doom-themes-treemacs-config)
+  (setq doom-themes-treemacs-theme "doom-colors")
   (doom-themes-org-config))
-
+(with-eval-after-load 'doom-themes
+  (doom-themes-treemacs-config))
 (use-package doom-modeline
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))

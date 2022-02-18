@@ -13,7 +13,9 @@
   :config
   (evil-mode 1))
 
-(use-package treemacs)
+(use-package treemacs
+  :config
+  (setq treemacs-project-follow-mode t))
 
 (use-package treemacs-evil
   :after (treemacs evil))
