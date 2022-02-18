@@ -59,6 +59,46 @@
 (defvar modules-dir (expand-file-name "modules" user-emacs-directory))
 (add-to-list 'load-path modules-dir)
 
+;; configure spaces instead of tabs
+(setq-default major-mode 'text-mode
+	      fill-column 80
+	      tab-width 4
+	      indent-tabs-mode nil) ; permanently disables TABs
+
+;;; performance boosts
+
+;; PGTK builds only: this timeout adds latency to frame operations, like
+;; `make-frame-invisible', which are frequently called without a guard because
+;; it's inexpensive in non-PGTK builds. Lowering the timeout from the default
+;; 0.1 should make childframes and packages that manipulate them (like `lsp-ui',
+;; `company-box', and `posframe') feel much snappier. See emacs-lsp/lsp-ui#613.
+(setq pgtk-wait-for-event-timeout 0.001)
+
+;; Increase how much is read from processes in a single chunk (default is 4kb).
+;; This is further increased elsewhere, where needed (like our LSP module).
+(setq read-process-output-max (* 64 1024))  ; 64kb
+
+;; Introduced in Emacs HEAD (b2f8c9f), this inhibits fontification while
+;; receiving input, which should help a little with scrolling performance.
+(setq redisplay-skip-fontification-on-input t)
+
+;; Get rid of "For information about GNU Emacs..." message at startup, unless
+;; we're in a daemon session where it'll say "Starting Emacs daemon." instead,
+;; which isn't so bad.
+(unless (daemonp)
+  (advice-add #'display-startup-echo-area-message :override #'ignore))
+
+;;; security
+;; dont ping things that look lke domain names
+(setq ffap-machine-p-known 'reject)
+
+;;; Reasonable defaults for interactive sessions
+
+;; Disable warnings from legacy advice system. They aren't useful, and what can
+;; we do about them, besides changing packages upstream?
+(setq ad-redefinition-action 'accept)
+
+;;; modules
 (require 'completion)
 (require 'company)
 (require 'editor)
