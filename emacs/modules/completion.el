@@ -32,4 +32,11 @@
          ("C-k" . ivy-previous-line)
          ("C-d" . ivy-reverse-i-search-kill)))
 
+(use-package ivy-rich
+  :config
+  (ivy-rich-mode))
+(use-package all-the-icons-ivy-rich
+  :config
+  (all-the-icons-ivy-rich-mode))
+
 ;;; completion.el ends here
