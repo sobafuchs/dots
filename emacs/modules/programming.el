@@ -23,4 +23,8 @@
   :config
   (which-key-mode))
 
+(use-package flycheck
+  :config
+  (global-flycheck-mode))
+
 (provide 'programming)
