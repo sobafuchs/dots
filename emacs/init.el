@@ -54,7 +54,11 @@
 (use-package doom-themes
   :config
   (load-theme 'doom-one t)
-  (doom-themes-visual-bell-config))
+  (doom-themes-visual-bell-config)
+  (setq doom-themes-treemacs-theme "atom-dark")
+  (doom-themes-treemacs-config)
+  (doom-themes-org-config))
+
 (use-package doom-modeline
   :init (doom-modeline-mode 1)
   :custom ((doom-modeline-height 15)))
