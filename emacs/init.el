@@ -1,14 +1,19 @@
-;; init.el -- configuration entrypoint
+;;; init.el --- entrypoint
 
 ;;; Commentary:
+;; This file sets up some global config options.
 
-;; This file sets up some global config options 
+;;; Code:
+
 (setq inhibit-startup-message t)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (tooltip-mode -1)
 (set-fringe-mode 0)
 (menu-bar-mode -1)
+(column-number-mode)
+(global-display-line-numbers-mode)
+
 (set-face-attribute 'default nil :font "Fira Code Retina" :height 180)
 (load-theme 'tango-dark)
 (setq custom-file "~/.emacs.d/custom.el") ;; dump custom settings to another file
@@ -59,25 +64,11 @@
 
 (use-package diminish)
 
-;; completion
-(use-package counsel
-  :after ivy
-  :config (counsel-mode))
-
-(use-package ivy
-  :diminish
-  :config
-  (ivy-mode 1)
-  :custom
-  (ivy-count-format "(%d/%d) ")
-  (ivy-use-virtual-buffers t)
-  :bind (("C-s" . swiper)))
-
 (defvar modules-dir (expand-file-name "modules" user-emacs-directory))
 (add-to-list 'load-path modules-dir)
 
+(require 'completion)
 (require 'company)
-(require 'programming)
 (require 'editor)
 (require 'lsp)
 (require 'lang-elisp)

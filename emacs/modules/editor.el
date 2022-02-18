@@ -32,6 +32,7 @@
 
 (use-package which-key
   :config
+  (setq which-key-idle-delay 0.3)
   (which-key-mode))
 
 (use-package flycheck
