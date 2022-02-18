@@ -81,4 +81,5 @@
 (require 'editor)
 (require 'lang-elisp)
 (require 'lang-clojure)
+(require 'lang-go)
 
