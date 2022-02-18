@@ -8,7 +8,7 @@
 
 (use-package go-mode
   :config
-  (add-hook 'go-mode-hook #'lsp-deferred))
+  (add-hook 'go-mode-hook 'lsp))
 
 (use-package go-eldoc)
 (use-package go-gen-test)
