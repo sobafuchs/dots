@@ -6,6 +6,9 @@
 ;;; Code:
 
 (setq inhibit-startup-message t)
+;; Disable warnings from legacy advice system. They aren't useful, and what can
+;; we do about them, besides changing packages upstream?
+(setq ad-redefinition-action 'accept)
 (scroll-bar-mode -1)
 (tool-bar-mode -1)
 (tooltip-mode -1)
@@ -91,12 +94,6 @@
 ;;; security
 ;; dont ping things that look lke domain names
 (setq ffap-machine-p-known 'reject)
-
-;;; Reasonable defaults for interactive sessions
-
-;; Disable warnings from legacy advice system. They aren't useful, and what can
-;; we do about them, besides changing packages upstream?
-(setq ad-redefinition-action 'accept)
 
 ;;; modules
 (require 'completion)
