@@ -22,8 +22,19 @@
 (load-theme 'tango-dark)
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
+
+(defcustom dots-folder "~/dots"
+  "The folder where dotfiles are located."
+  :type 'string
+  :group 'dots)
+
+(defcustom sobamacs-directory (expand-file-name "backups" user-emacs-directory)
+  "The folder where Emacs configuration is located."
+  :type 'string
+  :group 'dots)
+
 ;; store backups in a centralized folder so that project dirs dont get cluttered with them
-(setq backup-directory-alist '(("." . (expand-file-name "backups" user-emacs-directory))))
+(setq backup-directory-alist '(("." . sobamacs-directory)))
                                        
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
