@@ -18,7 +18,7 @@
 (column-number-mode)
 (global-display-line-numbers-mode)
 
-(set-face-attribute 'default nil :font "Fira Code Retina" :height 180)
+(set-face-attribute 'default nil :font "Fira Code Retina" :height 140)
 (load-theme 'tango-dark)
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
