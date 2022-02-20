@@ -1,3 +1,4 @@
+
 ;;; init.el --- entrypoint
 
 ;;; Commentary:
@@ -19,11 +20,11 @@
 
 (set-face-attribute 'default nil :font "Fira Code Retina" :height 180)
 (load-theme 'tango-dark)
-(setq custom-file "~/.emacs.d/custom.el") ;; dump custom settings to another file
+(setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 ;; store backups in a centralized folder so that project dirs dont get cluttered with them
-(setq backup-directory-alist '(("." . "~/.emacs.d/backups")))
-
+(setq backup-directory-alist '(("." . (expand-file-name "backups" user-emacs-directory))))
+                                       
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 (require 'package)
@@ -68,9 +69,9 @@
 
 ;; configure spaces instead of tabs
 (setq-default major-mode 'text-mode
-	      fill-column 80
-	      tab-width 4
-	      indent-tabs-mode nil) ; permanently disables TABs
+          fill-column 80
+          tab-width 4
+          indent-tabs-mode nil) ; permanently disables TABs
 
 ;;; performance boosts
 
@@ -108,4 +109,5 @@
 (require 'lang-clojure)
 (require 'lang-go)
 (require 'lang-ruby)
+(require 'lang-elixir)
 

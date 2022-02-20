@@ -4,6 +4,8 @@
   path = ~/.gitconfig-personal
 [includeIf "gitdir:~/dots/"]
   path = ~/.gitconfig-personal
+[includeIf "gitdir:~/workspace/code/oss/"]
+  path = ~/.gitconfig-personal
 
 [alias]
     hash = log --pretty=format:'%h' -n 1
