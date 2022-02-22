@@ -23,8 +23,8 @@
 (setq custom-file (expand-file-name "custom.el" user-emacs-directory))
 (load custom-file 'noerror)
 ;; store backups in a centralized folder so that project dirs dont get cluttered with them
-(setq backup-directory-alist '(((expand-file-name "backups" user-emacs-directory))))
-                                       
+(setq backup-directory-alist '(("." . "~/.emacs_backups")))
+
 (global-set-key (kbd "<escape>") 'keyboard-escape-quit)
 
 (require 'package)
@@ -110,4 +110,5 @@
 (require 'lang-go)
 (require 'lang-ruby)
 (require 'lang-elixir)
+(require 'lang-org)
 
