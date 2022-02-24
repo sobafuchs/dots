@@ -1,4 +1,4 @@
-;;; company.el -- configures company
+;; company.el -- configures company
 
 ;;; Commentary:
 
