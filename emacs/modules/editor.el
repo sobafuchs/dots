@@ -56,6 +56,7 @@
   :config
   (global-flycheck-mode))
 
+(use-package magit)
 (provide 'editor)
 
 ;;; editor.el ends here
