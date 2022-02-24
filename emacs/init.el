@@ -103,6 +103,7 @@
 ;;; modules
 (require 'completion)
 (require 'company)
+(require 'sm-evil)
 (require 'editor)
 (require 'lsp)
 (require 'lang-elisp)

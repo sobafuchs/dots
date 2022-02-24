@@ -7,19 +7,6 @@
 
 (use-package diminish)
 
-;; upgrade to emacs 28 to get access to C-r
-;; otherwise you need to download undo-fu
-(use-package evil
-  :init
-  (setq evil-want-keybinding nil)
-  :config
-  (evil-mode 1))
-
-(use-package evil-collection
-  :after evil
-  :config
-  (evil-collection-init))
-
 (use-package treemacs
   :config
   (setq treemacs-project-follow-mode t))
