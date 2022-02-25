@@ -104,6 +104,7 @@
 (require 'completion)
 (require 'company)
 (require 'sm-evil)
+(require 'sm-keymap)
 (require 'editor)
 (require 'lsp)
 (require 'lang-elisp)

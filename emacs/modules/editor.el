@@ -9,7 +9,9 @@
 
 (use-package treemacs
   :config
-  (setq treemacs-project-follow-mode t))
+  (setq treemacs-project-follow-mode t)
+  :bind (:map sm-leader-map
+              ("oe" . treemacs)))
 
 (use-package treemacs-evil
   :after (treemacs evil))
@@ -43,7 +45,11 @@
   :config
   (global-flycheck-mode))
 
-(use-package magit)
+(use-package magit
+  :bind (:map sm-leader-map
+              ("gs" . 'magit-status)
+              ("gl" . 'magit-log)))
+
 (provide 'editor)
 
 ;;; editor.el ends here

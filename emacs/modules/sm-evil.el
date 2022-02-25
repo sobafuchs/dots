@@ -18,7 +18,7 @@
   (evil-collection-init))
 
 (defvar sm-leader-map (make-sparse-keymap)
-  "Sobamacs keymap for leader key shortcuts")
+  "Sobamacs keymap for leader key shortcuts.")
 
 (define-key evil-normal-state-map (kbd "SPC") sm-leader-map)
 
