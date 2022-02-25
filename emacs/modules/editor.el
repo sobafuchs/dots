@@ -7,22 +7,11 @@
 
 (use-package diminish)
 
-;; upgrade to emacs 28 to get access to C-r
-;; otherwise you need to download undo-fu
-(use-package evil
-  :init
-  (setq evil-want-keybinding nil)
-  :config
-  (evil-mode 1))
-
-(use-package evil-collection
-  :after evil
-  :config
-  (evil-collection-init))
-
 (use-package treemacs
   :config
-  (setq treemacs-project-follow-mode t))
+  (setq treemacs-project-follow-mode t)
+  :bind (:map sm-leader-map
+              ("oe" . treemacs)))
 
 (use-package treemacs-evil
   :after (treemacs evil))
@@ -56,7 +45,11 @@
   :config
   (global-flycheck-mode))
 
-(use-package magit)
+(use-package magit
+  :bind (:map sm-leader-map
+              ("gs" . 'magit-status)
+              ("gl" . 'magit-log)))
+
 (provide 'editor)
 
 ;;; editor.el ends here
